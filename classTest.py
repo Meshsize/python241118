@@ -61,3 +61,5 @@ p1.printInfo()  # 예상 출력: ID: 1, Name: Alice
 people = [p1, m1, e1, p2, m2, e2]
 for person in people:
     person.printInfo()
+
+input()

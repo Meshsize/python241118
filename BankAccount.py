@@ -24,7 +24,8 @@ account1 = BankAccount(100, "전우치", 15000)
 account1.deposit(5000)
 account1.withdraw(3000)
 print(account1)
-#account1.balance = 150000000
-#print(account1)
-account1.__balance = 15000000 #효과가 없음
+account1.balance = 150000000
 print(account1)
+#account1.__balance = 15000000 #효과가 없음
+#print(account1)
+input()
