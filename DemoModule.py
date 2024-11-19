@@ -3,5 +3,5 @@ x = 2
 def printX():
     print("x: {0}".format(x))
 
-    
-    
+import glob
+print(glob.glob(r'c:\work\*.py'))
