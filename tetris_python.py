@@ -84,15 +84,19 @@ class Tetris:
             self.current_piece = rotated
             
     def draw(self):
-        self.screen.fill(BLACK)
+        self.screen.fill(WHITE)
         
         # 보드 그리기
         for y, row in enumerate(self.board):
             for x, cell in enumerate(row):
                 if cell:
-                    pygame.draw.rect(self.screen, WHITE,
+                    pygame.draw.rect(self.screen, BLACK,
                                    (x * BLOCK_SIZE, y * BLOCK_SIZE,
                                     BLOCK_SIZE - 1, BLOCK_SIZE - 1))
+                    # 테두리 추가
+                    pygame.draw.rect(self.screen, RED,  # 테두리 색상: 빨강
+                               (x * BLOCK_SIZE, y * BLOCK_SIZE,
+                                BLOCK_SIZE, BLOCK_SIZE), 1)  # 테두리 두께: 1 픽셀
                     
         # 현재 조각 그리기
         if self.current_piece:
